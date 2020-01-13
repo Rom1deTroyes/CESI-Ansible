@@ -4,3 +4,14 @@
     name: johnd
     comment: John Doe
     shell: /bin/bash
+- name: Create folder
+  file:
+    path: /mnt/johnd
+    state: directory
+    mode: '0755'
+- name: Create folders
+  file:
+    path: /mnt/{{ item }}
+    state: directory
+    mode: '0755'
+  with_items: "{{ folder_list }}"
