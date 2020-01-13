@@ -1,0 +1,4 @@
+---
+- hosts: cesi
+  roles:
+          - common

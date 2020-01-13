@@ -1,0 +1,6 @@
+---
+- name: Create standard System User
+  user:
+    name: johnd
+    comment: John Doe
+    shell: /bin/bash
